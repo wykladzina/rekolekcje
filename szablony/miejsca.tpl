@@ -1,0 +1,24 @@
+{extends file='matka.tpl'}
+
+{block name=boczek}
+  {include file='kawalki/formularz_nowego_miejsca.php'}
+{/block}
+
+{block name=tresc}
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th>nazwa miejsca</th>
+    </tr>
+  </thead>
+  <tbody>
+    {foreach from=$miejsca item=miejsce}
+    <tr>
+      <td>{$miejsce->get_nazwa_miejsca()}</td>
+    </tr>
+    {/foreach}
+  </tbody>
+</table>
+
+{/block}
