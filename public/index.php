@@ -18,5 +18,6 @@ $kontroler = 'start';
 if (isset($_REQUEST['kontroler'])) {
   $kontroler = $_REQUEST['kontroler'];
 }
+$smarty->assign('kontroler', $kontroler);
 (new $kontroler())->dzialaj($smarty, $serwis);
 ?>
