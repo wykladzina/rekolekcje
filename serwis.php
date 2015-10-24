@@ -7,8 +7,12 @@ class Serwis {
   function daj_organizatorow() {
     return Organizator::create_array(pg_fetch_all(pg_query("select * from organizatorzy")));
   }
-  function stworz_organizatora($nazwa_organizatora, $adres_organizatora) {
-    pg_query("insert into organizatorzy (nazwa_organizatora, adres_organizatora) values ('$nazwa_organizatora', '$adres_organizatora')");
+  function stworz_organizatora($miejsce) {
+    pg_query_params(
+      $this->polaczenie,
+      "insert into organizatorzy (nazwa_organizatora, adres_organizatora) values ($1, $2)",
+      array($miejsce->get_nazwa_organizatora(), $miejsce->get_adres_organizatora())
+    );
   }
   function daj_miejsca() {
     return Miejsce::create_array(pg_fetch_all(pg_query("select * from miejsca")));

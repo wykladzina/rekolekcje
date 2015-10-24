@@ -1,5 +1,5 @@
 <form method="post">
-  <input type="hidden" name="kontroler" value="dodaj_wydarzenie">
+  <input type="hidden" name="kontroler" value="dodaj_organizatora">
 
   <legend>dodaj organizatora</legend>
 
