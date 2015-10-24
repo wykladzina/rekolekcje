@@ -12,6 +12,14 @@ class Organizator {
     return "Organizator: {$this->nazwa_organizatora} {$this->adres_organizatora}";
   }
 
+  static function create_array($argumentss) {
+    $miejsca = array();
+    foreach ($argumentss as $arguments) {
+      $miejsca[] = new Organizator($arguments);
+    }
+    return $miejsca;
+  }
+
   function get_nazwa_organizatora() {
     return $this->nazwa_organizatora;
   }

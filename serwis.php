@@ -5,7 +5,7 @@ class Serwis {
     $this->polaczenie = $polaczenie;
   }
   function daj_organizatorow() {
-    return pg_fetch_all(pg_query("select * from organizatorzy"));
+    return Organizator::create_array(pg_fetch_all(pg_query("select * from organizatorzy")));
   }
   function stworz_organizatora($nazwa_organizatora, $adres_organizatora) {
     pg_query("insert into organizatorzy (nazwa_organizatora, adres_organizatora) values ('$nazwa_organizatora', '$adres_organizatora')");
