@@ -25,7 +25,7 @@ class Serwis {
     );
   }
   function daj_wydarzenia() {
-    return pg_fetch_all(pg_query("select * from wydarzenia natural join organizatorzy natural join miejsca"));
+    return Wydarzenie::create_array(pg_fetch_all(pg_query("select * from wydarzenia natural join organizatorzy natural join miejsca")));
   }
   function stworz_wydarzenie($wydarzenie) {
     pg_query("insert into wydarzenia (nazwa_wydarzenia, data_wydarzenia, opis_wydarzenia, id_organizatora, id_miejsca) values ('$wydarzenie->nazwa_wydarzenia', '$wydarzenie->data_wydarzenia', '$wydarzenie->opis_wydarzenia', '$id_organizatora', '$id_miejsca')");
