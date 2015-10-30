@@ -20,12 +20,20 @@ class Organizator {
     return $miejsca;
   }
 
+  function get_id_organizatora() {
+    return $this->id_organizatora;
+  }
+
   function get_nazwa_organizatora() {
     return $this->nazwa_organizatora;
   }
 
   function get_adres_organizatora() {
     return $this->adres_organizatora;
+  }
+
+  function set_id_organizatora($id_organizatora) {
+    $this->id_organizatora = $id_organizatora;
   }
 
   function set_nazwa_organizatora($nazwa_organizatora) {

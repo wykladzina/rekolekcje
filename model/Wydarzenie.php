@@ -3,6 +3,8 @@ class Wydarzenie {
   private $nazwa_wydarzenia;
   private $data_wydarzenia;
   private $opis_wydarzenia;
+  private $miejsce;
+  private $organizator;
 
   function __construct($arguments) {
     $this->set_nazwa_wydarzenia($arguments['nazwa_wydarzenia']);
@@ -22,6 +24,10 @@ class Wydarzenie {
     return "Wydarzenie: {$this->nazwa_wydarzenia} {$this->data_wydarzenia} {$this->opis_wydarzenia}";
   }
 
+  function get_id_wydarzenia() {
+    return $this->id_wydarzenia;
+  }
+
   function get_nazwa_wydarzenia() {
     return $this->nazwa_wydarzenia;
   }
@@ -32,6 +38,18 @@ class Wydarzenie {
 
   function get_opis_wydarzenia() {
     return $this->opis_wydarzenia;
+  }
+
+  function get_miejsce() {
+    return $this->miejsce;
+  }
+
+  function get_organizator() {
+    return $this->organizator;
+  }
+
+  function set_id_wydarzenia($id_wydarzenia) {
+    $this->id_wydarzenia = $id_wydarzenia;
   }
 
   function set_nazwa_wydarzenia($nazwa_wydarzenia) {
@@ -45,4 +63,13 @@ class Wydarzenie {
   function set_opis_wydarzenia($opis_wydarzenia) {
     $this->opis_wydarzenia = $opis_wydarzenia;
   }
+
+  function set_miejsce($miejsce) {
+    $this->miejsce = $miejsce;
+  }
+
+  function set_organizator($organizator) {
+    $this->organizator = $organizator;
+  }
+
 }

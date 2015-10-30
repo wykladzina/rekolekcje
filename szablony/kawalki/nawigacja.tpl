@@ -17,6 +17,9 @@
       <li {if $kontroler == 'organizatorzy' }class="active"{/if}>
         <a href="?kontroler=organizatorzy">organizatorzy</a>
       </li>
+      <li {if $kontroler == 'nowe_wydarzenie' }class="active"{/if}>
+        <a href="?kontroler=nowe_wydarzenie">dodaj wydarzenie</a>
+      </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li>
