@@ -9,6 +9,11 @@
 
     <meta name="description" content="Source code generated using layoutit.com">
     <script src='jquery/jquery.min.js'></script>
+    <script src='webshim/minified/polyfiller.js'></script>
+    <script>
+      $.webshims.polyfill('forms-ext');
+      webshim.activeLang('pl');
+    </script>
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
 
   </head>
