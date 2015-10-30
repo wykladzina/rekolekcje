@@ -31,6 +31,18 @@ class Serwis {
   function daj_wydarzenia() {
     return Wydarzenie::create_array(pg_fetch_all(pg_query("select * from wydarzenia natural join organizatorzy natural join miejsca")));
   }
+  function daj_najnowsze_wydarzenia() {
+    $zapytanie = "
+      select *
+      from
+        wydarzenia
+        natural join organizatorzy
+        natural join miejsca
+      where data_wydarzenia > current_date
+      order by data_wydarzenia
+      limit 5";
+    return Wydarzenie::create_array(pg_fetch_all(pg_query($zapytanie)));
+  }
   function stworz_wydarzenie($wydarzenie) {
     $query_handle = pg_query_params(
       $this->polaczenie,

@@ -1,7 +1,7 @@
 {extends file='matka.tpl'}
 
 {block name=boczek}
-  tu będzie coś tam z boku
+  {include file='kawalki/najnowsze_wydarzenia.tpl'}
 {/block}
 
 {block name=tresc}
