@@ -7,9 +7,21 @@ class Wydarzenie {
   private $organizator;
 
   function __construct($arguments) {
+    if (isset($arguments['id_wydarzenia'])) {
+      $this->set_id_wydarzenia($arguments['id_wydarzenia']);
+    }
     $this->set_nazwa_wydarzenia($arguments['nazwa_wydarzenia']);
     $this->set_data_wydarzenia($arguments['data_wydarzenia']);
     $this->set_opis_wydarzenia($arguments['opis_wydarzenia']);
+  }
+
+  static function create_with_children($arguments) {
+    $miejsce = new Miejsce($arguments);
+    $organizator = new Organizator($arguments);
+    $wydarzenie = new Wydarzenie($arguments);
+    $wydarzenie->set_miejsce($miejsce);
+    $wydarzenie->set_organizator($organizator);
+    return $wydarzenie;
   }
 
   static function create_array($argumentss) {
