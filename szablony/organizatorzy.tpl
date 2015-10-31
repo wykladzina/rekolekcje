@@ -1,7 +1,7 @@
 {extends file='matka.tpl'}
 
 {block name=boczek}
-  {include file='kawalki/formularz_nowego_organizatora.php'}
+  {include file='kawalki/formularz_nowego_organizatora.tpl'}
 {/block}
 
 {block name=tresc}

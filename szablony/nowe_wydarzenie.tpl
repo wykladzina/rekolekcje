@@ -5,5 +5,5 @@
 {/block}
 
 {block name=tresc}
-  {include file='kawalki/formularz_nowego_wydarzenia.php'}
+  {include file='kawalki/formularz_nowego_wydarzenia.tpl'}
 {/block}
