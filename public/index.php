@@ -15,10 +15,11 @@ $smarty->setCompileDir('../smarty/templates_c');
 require '../serwis.php';
 $serwis = new Serwis(pg_connect('user=rekolekcje dbname=rekolekcje password=koRelacJe'));
 
-$kontroler = '\kontrolery\start';
+$kontroler = 'start';
 if (isset($_REQUEST['kontroler'])) {
-  $kontroler = '\\kontrolery\\' . $_REQUEST['kontroler'];
+  $kontroler = $_REQUEST['kontroler'];
 }
 $smarty->assign('kontroler', $kontroler);
-(new $kontroler())->dzialaj($smarty, $serwis);
+$klasa_kontrolera = "\\kontrolery\\$kontroler";
+(new $klasa_kontrolera())->dzialaj($smarty, $serwis);
 ?>

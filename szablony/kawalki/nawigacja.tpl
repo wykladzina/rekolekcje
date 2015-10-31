@@ -8,13 +8,13 @@
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li {if $kontroler == 'miejsca' }class="active"{/if}>
+      <li {if $kontroler == 'miejsca'}class="active"{/if}>
         <a href="?kontroler=miejsca">miejsca</a>
       </li>
-      <li {if $kontroler == 'organizatorzy' }class="active"{/if}>
+      <li {if $kontroler == 'organizatorzy'}class="active"{/if}>
         <a href="?kontroler=organizatorzy">organizatorzy</a>
       </li>
-      <li {if $kontroler == 'nowe_wydarzenie' }class="active"{/if}>
+      <li {if $kontroler == 'nowe_wydarzenie'}class="active"{/if}>
         <a href="?kontroler=nowe_wydarzenie">dodaj wydarzenie</a>
       </li>
     </ul>
