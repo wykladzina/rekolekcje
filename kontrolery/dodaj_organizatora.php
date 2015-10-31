@@ -1,5 +1,7 @@
 <?php
 
+namespace kontrolery;
+
 class dodaj_organizatora {
   function dzialaj($smarty, $serwis) {
     $organizator = new Organizator($_POST);

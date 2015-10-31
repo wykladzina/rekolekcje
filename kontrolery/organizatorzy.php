@@ -1,5 +1,7 @@
 <?php
 
+namespace kontrolery;
+
 class organizatorzy {
   function dzialaj($smarty, $serwis) {
     $organizatorzy = $serwis->daj_organizatorow();

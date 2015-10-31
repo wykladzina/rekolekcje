@@ -1,5 +1,7 @@
 <?php
 
+namespace kontrolery;
+
 class nowe_wydarzenie {
   function dzialaj($smarty, $serwis) {
     $smarty->assign('najnowsze_wydarzenia', $serwis->daj_najnowsze_wydarzenia());

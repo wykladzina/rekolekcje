@@ -1,5 +1,7 @@
 <?php
 
+namespace kontrolery;
+
 class miejsca {
   function dzialaj($smarty, $serwis) {
     $miejsca = $serwis->daj_miejsca();

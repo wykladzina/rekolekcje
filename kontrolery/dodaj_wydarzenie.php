@@ -1,6 +1,6 @@
 <?php
 
-
+namespace kontrolery;
 
 class dodaj_wydarzenie {
   function dzialaj($smarty, $serwis) {

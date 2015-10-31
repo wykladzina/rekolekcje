@@ -1,5 +1,7 @@
 <?php
 
+namespace kontrolery;
+
 class dodaj_miejsce {
   function dzialaj($smarty, $serwis) {
     $miejsce = new Miejsce($_POST);
