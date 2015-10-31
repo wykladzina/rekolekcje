@@ -25,12 +25,12 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li>
-        <form class="navbar-form navbar-left" role="search">
+        <form action="?kontroler=szukaj" class="navbar-form navbar-left" role="search">
           <div class="form-group">
             <input class="form-control" type="text" />
           </div>
           <button type="submit" class="btn btn-default">
-            Submit
+            szukaj
           </button>
         </form>
       </li>
