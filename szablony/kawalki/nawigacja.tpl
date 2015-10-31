@@ -8,9 +8,6 @@
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li {if $kontroler == 'start' }class="active"{/if}>
-        <a href=".">wydarzenia</a>
-      </li>
       <li {if $kontroler == 'miejsca' }class="active"{/if}>
         <a href="?kontroler=miejsca">miejsca</a>
       </li>
