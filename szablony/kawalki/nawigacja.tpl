@@ -17,6 +17,11 @@
       <li {if $kontroler == 'nowe_wydarzenie'}class="active"{/if}>
         <a href="?kontroler=nowe_wydarzenie">dodaj wydarzenie</a>
       </li>
+{if $kontroler == 'wydarzenie'}
+      <li class="active">
+        <a href="?kontroler=wydarzenie&amp;id_wydarzenia={$wydarzenie->get_id_wydarzenia()}">wydarzenie</a>
+      </li>
+{/if}
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li>
