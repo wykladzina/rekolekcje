@@ -20,6 +20,10 @@
   <body>
 
     <div class="row">
+      <div class="col-md-12" style="background: gray; height: 20vh"></div>
+    </div>
+
+    <div class="row">
   		<div class="col-md-12">
         {include file='kawalki/nawigacja.tpl'}
   		</div>
