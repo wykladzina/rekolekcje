@@ -2,11 +2,11 @@
 
 namespace kontrolery;
 
-class start {
-  function dzialaj($smarty, $serwis) {
-    $wydarzenia = $serwis->daj_wydarzenia();
-    $smarty->assign('wydarzenia', $wydarzenia);
-    $smarty->assign('najnowsze_wydarzenia', $serwis->daj_najnowsze_wydarzenia());
-    $smarty->display('start.tpl');
+class start extends Widok {
+  function daj_dane($serwis) {
+    return [
+      'wydarzenia' => $serwis->daj_wydarzenia(),
+      'najnowsze_wydarzenia' => $serwis->daj_najnowsze_wydarzenia()
+    ];
   }
 }

@@ -1,4 +1,4 @@
-<form method="post">
+<form method="post" action=".">
   <input type="hidden" name="kontroler" value="dodaj_organizatora">
 
   <legend>dodaj organizatora</legend>

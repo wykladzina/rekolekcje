@@ -2,10 +2,15 @@
 
 namespace kontrolery;
 
-class dodaj_organizatora {
-  function dzialaj($smarty, $serwis) {
-    $organizator = new Organizator($_POST);
-    $serwis->stworz_organizatora($organizator);
-    header('Location: ?kontroler=organizatorzy');
+class dodaj_organizatora extends Akcja {
+
+  function daj_url_przekierowania() {
+    return '?kontroler=organizatorzy';
   }
+
+  function rob($serwis) {
+    $organizator = new \Organizator($_POST);
+    $serwis->stworz_organizatora($organizator);
+  }
+
 }

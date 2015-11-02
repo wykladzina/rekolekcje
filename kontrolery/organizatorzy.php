@@ -2,10 +2,10 @@
 
 namespace kontrolery;
 
-class organizatorzy {
-  function dzialaj($smarty, $serwis) {
-    $organizatorzy = $serwis->daj_organizatorow();
-    $smarty->assign('organizatorzy', $organizatorzy);
-    $smarty->display('organizatorzy.tpl');
+class organizatorzy extends Widok {
+  function daj_dane($serwis) {
+    return [
+      'organizatorzy' => $serwis->daj_organizatorow()
+    ];
   }
 }

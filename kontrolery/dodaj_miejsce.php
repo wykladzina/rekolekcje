@@ -2,10 +2,15 @@
 
 namespace kontrolery;
 
-class dodaj_miejsce {
-  function dzialaj($smarty, $serwis) {
-    $miejsce = new Miejsce($_POST);
-    $serwis->stworz_miejsce($miejsce);
-    header('Location: ?kontroler=miejsca');
+class dodaj_miejsce extends Akcja {
+
+  function daj_url_przekierowania() {
+    return '?kontroler=miejsca';
   }
+
+  function rob($serwis) {
+    $miejsce = new \Miejsce($_POST);
+    $serwis->stworz_miejsce($miejsce);
+  }
+
 }
