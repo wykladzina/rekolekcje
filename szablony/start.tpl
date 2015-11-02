@@ -1,9 +1,5 @@
 {extends file='matka.tpl'}
 
-{block name=boczek}
-  {include file='kawalki/najnowsze_wydarzenia.tpl'}
-{/block}
-
 {block name=tresc}
 
 <table class='table'>

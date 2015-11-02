@@ -1,9 +1,5 @@
 {extends file='matka.tpl'}
 
-{block name=boczek}
-  {include file='kawalki/najnowsze_wydarzenia.tpl'}
-{/block}
-
 {block name=tresc}
 
   <h4>{$wydarzenie->get_nazwa_wydarzenia()}</h4>

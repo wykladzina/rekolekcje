@@ -1,9 +1,5 @@
 {extends file='matka.tpl'}
 
-{block name=boczek}
-  {include file='kawalki/formularz_nowego_organizatora.tpl'}
-{/block}
-
 {block name=tresc}
 
 <table class='table'>
@@ -20,5 +16,7 @@
     {/foreach}
   </tbody>
 </table>
+
+{include file='kawalki/formularz_nowego_organizatora.tpl'}
 
 {/block}

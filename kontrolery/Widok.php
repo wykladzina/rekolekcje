@@ -14,6 +14,7 @@ abstract class Widok {
     }
     $krotka_nazwa_klasy = str_replace('kontrolery\\', '', static::class);
     $smarty->assign('kontroler', $krotka_nazwa_klasy);
+    $smarty->assign('najnowsze_wydarzenia', $serwis->daj_najnowsze_wydarzenia());
     $smarty->display("{$krotka_nazwa_klasy}.tpl");
   }
 }

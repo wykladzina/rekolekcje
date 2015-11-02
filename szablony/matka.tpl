@@ -31,7 +31,11 @@
 
     <div class="row">
   		<div class="col-md-4">
-        <div class="container-fluid">{block name=boczek}{/block}</div>
+        <div class="container-fluid">
+          {block name=boczek}
+            {include file='kawalki/najnowsze_wydarzenia.tpl'}
+          {/block}
+        </div>
   		</div>
   		<div class="col-md-8">
         <div class="container-fluid">{block name=tresc}{/block}</div>
