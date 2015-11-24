@@ -13,5 +13,10 @@
     <textarea class="form-control" id="adres_miejsca" name="adres_miejsca"></textarea>
   </div>
 
+  <div class="form-group">
+    <label for="domyslne_warunki_zakwaterowania_miejsca">warunki zakwaterowania:</label>
+    <textarea class="form-control" id="domyslne_warunki_zakwaterowania_miejsca" name="domyslne_warunki_zakwaterowania_miejsca"></textarea>
+  </div>
+
   <button type="submit" class="btn btn-primary">zapisz to miejsce</button>
 </form>

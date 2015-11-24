@@ -11,7 +11,7 @@
   <tbody>
     {foreach from=$organizatorzy item=organizator}
     <tr>
-      <td>{$organizator->get_nazwa_organizatora()}</td>
+      <td>{$organizator->nazwa_organizatora}</td>
     </tr>
     {/foreach}
   </tbody>

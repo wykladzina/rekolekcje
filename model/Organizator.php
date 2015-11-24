@@ -1,46 +1,30 @@
 <?php
 class Organizator {
-  private $nazwa_organizatora;
-  private $adres_organizatora;
+  public $id_organizatora;
+  public $nazwa_organizatora;
+  public $domyslna_osoba_do_kontaktu_organizatora;
+  public $domyslny_telefon_organizatora;
+  public $domyslny_adres_email_organizatora;
+  public $domyslny_url_organizatora;
 
   function __construct($arguments) {
-    $this->set_nazwa_organizatora($arguments['nazwa_organizatora']);
-    $this->set_adres_organizatora($arguments['adres_organizatora']);
-  }
-
-  function __toString() {
-    return "Organizator: {$this->nazwa_organizatora} {$this->adres_organizatora}";
+    if (isset($arguments['id_organizatora'])) {
+      $this->id_organizatora = $arguments['id_organizatora'];
+    }
+    $this->nazwa_organizatora = $arguments['nazwa_organizatora'];
+    $this->domyslna_osoba_do_kontaktu_organizatora = $arguments['domyslna_osoba_do_kontaktu_organizatora'];
+    $this->domyslny_telefon_organizatora = $arguments['domyslny_telefon_organizatora'];
+    $this->domyslny_adres_email_organizatora = $arguments['domyslny_adres_email_organizatora'];
+    $this->domyslny_url_organizatora = $arguments['domyslny_url_organizatora'];
   }
 
   static function create_array($argumentss) {
-    $miejsca = array();
+    $organizatorzy = array();
     foreach ($argumentss as $arguments) {
-      $miejsca[] = new Organizator($arguments);
+      $organizatorzy[] = new Organizator($arguments);
     }
-    return $miejsca;
+    return $organizatorzy;
   }
 
-  function get_id_organizatora() {
-    return $this->id_organizatora;
-  }
 
-  function get_nazwa_organizatora() {
-    return $this->nazwa_organizatora;
-  }
-
-  function get_adres_organizatora() {
-    return $this->adres_organizatora;
-  }
-
-  function set_id_organizatora($id_organizatora) {
-    $this->id_organizatora = $id_organizatora;
-  }
-
-  function set_nazwa_organizatora($nazwa_organizatora) {
-    $this->nazwa_organizatora = $nazwa_organizatora;
-  }
-
-  function set_adres_organizatora($adres_organizatora) {
-    $this->adres_organizatora = $adres_organizatora;
-  }
 }

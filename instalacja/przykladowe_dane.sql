@@ -1,22 +1,50 @@
-insert into organizatorzy (nazwa_organizatora, adres_organizatora) values ('pewien organizator', 'ul. Kwiatowa 3/15
-00-123 Gliwice');
-insert into organizatorzy (nazwa_organizatora, adres_organizatora) values ('inny organizator', 'ul. Polna 4a
-00-012 Warszawa');
-insert into organizatorzy (nazwa_organizatora, adres_organizatora) values ('trzeci organizator', 'ul. Miętowa 4
-15-115 Radom');
-insert into organizatorzy (nazwa_organizatora, adres_organizatora) values ('taki sobie organizator', 'ul. Ogrodowa 1/3
-11-999 Gdańsk');
+insert into organizatorzy (
+  nazwa_organizatora,
+  domyslna_osoba_do_kontaktu_organizatora,
+  domyslny_telefon_organizatora,
+  domyslny_adres_email_organizatora,
+  domyslny_url_organizatora
+) values (
+  'pewien organizator',
+  'Jan Kowalski',
+  '555-666-777',
+  'jkowalski@aaa.pl',
+  'http://kuku.pl'
+);
 
-insert into miejsca (nazwa_miejsca, adres_miejsca) values ('pierwsze miejsce', 'ul. Miła 2
-00-975 Warszawa');
-insert into miejsca (nazwa_miejsca, adres_miejsca) values ('drugie miejsce', 'ul. Żytnia 3/5
-01-342 Warszawa');
-insert into miejsca (nazwa_miejsca, adres_miejsca) values ('trzecie miejsce', 'ul. Miloszewicza 19
-99-085 Grabowo');
+insert into miejsca (nazwa_miejsca, adres_miejsca, domyslne_warunki_zakwaterowania_miejsca) values ('pierwsze miejsce', 'ul. Miła 2
+00-975 Warszawa', 'zakwaterowanie w domkach kempingowych');
 
-insert into wydarzenia (nazwa_wydarzenia, data_wydarzenia, opis_wydarzenia, id_organizatora, id_miejsca)
-values ('jakieś wydarzenie', '2015-10-24', 'to jest opis wydarzenia', 1, 1);
-insert into wydarzenia (nazwa_wydarzenia, data_wydarzenia, opis_wydarzenia, id_organizatora, id_miejsca)
-values ('inne wydarzenie', '2011-07-30', 'to jest opis wydarzenia', 2, 3);
-insert into wydarzenia (nazwa_wydarzenia, data_wydarzenia, opis_wydarzenia, id_organizatora, id_miejsca)
-values ('kolejne wydarzenie', '2016-01-05', 'to jest opis wydarzenia', 4, 3);
+insert into wydarzenia (
+  nazwa_wydarzenia,
+  prowadzacy_wydarzenia,
+  data_wydarzenia,
+  opis_wydarzenia,
+  informacje_organizacyjne_wydarzenia,
+  cel_wydarzenia,
+  adresat_wydarzenia,
+  oplaty_wydarzenia,
+  id_organizatora,
+  osoba_do_kontaktu_organizatora,
+  telefon_organizatora,
+  adres_email_organizatora,
+  url_organizatora,
+  id_miejsca,
+  warunki_zakwaterowania_miejsca
+) values (
+  'jakieś wydarzenie',
+  'Stefan Morela',
+  '2011-12-13',
+  'opis, opis, tralala',
+  'przyjechać z własną poduszką',
+  'jakiś cel',
+  'wydarzenie adresowane do kobiet i mężczyzn',
+  '200 zł',
+  1,
+  'Mirek Bombowski',
+  '121-111-222',
+  'm@mmm.pl',
+  'http://aaa.pl',
+  1,
+  'zakwaterowanie w pokojach dwuosobowych z łazienką'
+);

@@ -11,7 +11,7 @@
   <tbody>
     {foreach from=$wydarzenia item=wydarzenie}
     <tr>
-      <td>{$wydarzenie->get_nazwa_wydarzenia()}</td>
+      <td>{$wydarzenie->nazwa_wydarzenia}</td>
     </tr>
     {/foreach}
   </tbody>

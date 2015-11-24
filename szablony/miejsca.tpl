@@ -11,7 +11,7 @@
   <tbody>
     {foreach from=$miejsca item=miejsce}
     <tr>
-      <td>{$miejsce->get_nazwa_miejsca()}</td>
+      <td>{$miejsce->nazwa_miejsca}</td>
     </tr>
     {/foreach}
   </tbody>

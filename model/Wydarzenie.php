@@ -1,87 +1,57 @@
 <?php
 class Wydarzenie {
-  private $nazwa_wydarzenia;
-  private $data_wydarzenia;
-  private $opis_wydarzenia;
-  private $miejsce;
-  private $organizator;
+  public $id_wydarzenia;
+  public $nazwa_wydarzenia;
+  public $prowadzacy_wydarzenia;
+  public $data_wydarzenia;
+  public $opis_wydarzenia;
+  public $informacje_organizacyjne_wydarzenia;
+  public $cel_wydarzenia;
+  public $adresat_wydarzenia;
+  public $oplaty_wydarzenia;
+  public $organizator;
+  public $osoba_do_kontaktu_organizatora;
+  public $telefon_organizatora;
+  public $adres_email_organizatora;
+  public $url_organizatora;
+  public $miejsce;
+  public $warunki_zakwaterowania_miejsca;
+
 
   function __construct($arguments) {
     if (isset($arguments['id_wydarzenia'])) {
-      $this->set_id_wydarzenia($arguments['id_wydarzenia']);
+      $this->id_wydarzenia = $arguments['id_wydarzenia'];
     }
-    $this->set_nazwa_wydarzenia($arguments['nazwa_wydarzenia']);
-    $this->set_data_wydarzenia($arguments['data_wydarzenia']);
-    $this->set_opis_wydarzenia($arguments['opis_wydarzenia']);
+    $this->nazwa_wydarzenia = $arguments['nazwa_wydarzenia'];
+    $this->prowadzacy_wydarzenia = $arguments['prowadzacy_wydarzenia'];
+    $this->data_wydarzenia = $arguments['data_wydarzenia'];
+    $this->opis_wydarzenia = $arguments['opis_wydarzenia'];
+    $this->informacje_organizacyjne_wydarzenia = $arguments['informacje_organizacyjne_wydarzenia'];
+    $this->cel_wydarzenia = $arguments['cel_wydarzenia'];
+    $this->adresat_wydarzenia = $arguments['adresat_wydarzenia'];
+    $this->oplaty_wydarzenia = $arguments['oplaty_wydarzenia'];
+    $this->osoba_do_kontaktu_organizatora = $arguments['osoba_do_kontaktu_organizatora'];
+    $this->telefon_organizatora = $arguments['telefon_organizatora'];
+    $this->adres_email_organizatora = $arguments['adres_email_organizatora'];
+    $this->url_organizatora = $arguments['url_organizatora'];
+    $this->warunki_zakwaterowania_miejsca = $arguments['warunki_zakwaterowania_miejsca'];
   }
 
   static function create_with_children($arguments) {
     $miejsce = new Miejsce($arguments);
     $organizator = new Organizator($arguments);
     $wydarzenie = new Wydarzenie($arguments);
-    $wydarzenie->set_miejsce($miejsce);
-    $wydarzenie->set_organizator($organizator);
+    $wydarzenie->miejsce = $miejsce;
+    $wydarzenie->organizator = $organizator;
     return $wydarzenie;
   }
 
   static function create_array($argumentss) {
     $wydarzenia = array();
-    foreach ($argumentss as $arguments) {
-      $wydarzenia[] = new Wydarzenie($arguments);
+    for ($i = 0; $i < count($argumentss); $i++) {
+      $wydarzenia[] = new Wydarzenie($argumentss[$i]);
     }
     return $wydarzenia;
-  }
-
-  function __toString() {
-    return "Wydarzenie: {$this->nazwa_wydarzenia} {$this->data_wydarzenia} {$this->opis_wydarzenia}";
-  }
-
-  function get_id_wydarzenia() {
-    return $this->id_wydarzenia;
-  }
-
-  function get_nazwa_wydarzenia() {
-    return $this->nazwa_wydarzenia;
-  }
-
-  function get_data_wydarzenia() {
-    return $this->data_wydarzenia;
-  }
-
-  function get_opis_wydarzenia() {
-    return $this->opis_wydarzenia;
-  }
-
-  function get_miejsce() {
-    return $this->miejsce;
-  }
-
-  function get_organizator() {
-    return $this->organizator;
-  }
-
-  function set_id_wydarzenia($id_wydarzenia) {
-    $this->id_wydarzenia = $id_wydarzenia;
-  }
-
-  function set_nazwa_wydarzenia($nazwa_wydarzenia) {
-    $this->nazwa_wydarzenia = $nazwa_wydarzenia;
-  }
-
-  function set_data_wydarzenia($data_wydarzenia) {
-    $this->data_wydarzenia = $data_wydarzenia;
-  }
-
-  function set_opis_wydarzenia($opis_wydarzenia) {
-    $this->opis_wydarzenia = $opis_wydarzenia;
-  }
-
-  function set_miejsce($miejsce) {
-    $this->miejsce = $miejsce;
-  }
-
-  function set_organizator($organizator) {
-    $this->organizator = $organizator;
   }
 
 }

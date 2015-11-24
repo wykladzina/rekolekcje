@@ -19,7 +19,7 @@
       </li>
 {if $kontroler == 'wydarzenie'}
       <li class="active">
-        <a href="?kontroler=wydarzenie&amp;id_wydarzenia={$wydarzenie->get_id_wydarzenia()}">wydarzenie</a>
+        <a href="?kontroler=wydarzenie&amp;id_wydarzenia={$wydarzenie->id_wydarzenia}">wydarzenie</a>
       </li>
 {/if}
     </ul>
